@@ -106,14 +106,14 @@ export function Users() {
 
       <Card>
         <CardHeader>
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-secondary-400" />
+          <div className="flex flex-col md:flex-row gap-4 px-10 ">
+            <div className="flex-1 relative ">
+              <Search  className="absolute my-2.5 mx-3  w-5 h-6 text-secondary-400" />
               <Input
-                placeholder="Search users..."
+                placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
+                className=" pl-9 text-black lg:w-72 md:w-48"
               />
             </div>
             <Select
@@ -125,7 +125,7 @@ export function Users() {
                 { value: 'Manager', label: 'Manager' },
                 { value: 'User', label: 'User' },
               ]}
-              className="md:w-48"
+              className="md:w-48 lg:w-72"
             />
           </div>
         </CardHeader>

@@ -6,7 +6,7 @@ interface MinimalLayoutProps {
 
 export function MinimalLayout({ children }: MinimalLayoutProps) {
   return (
-    <div className="min-h-screen bg-secondary-50 dark:bg-secondary-950 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-secondary-300 dark:bg-secondary-950 flex items-center justify-center p-4">
       {children}
     </div>
   );

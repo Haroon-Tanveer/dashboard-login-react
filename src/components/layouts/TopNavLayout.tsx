@@ -10,7 +10,7 @@ export function TopNavLayout({ children }: TopNavLayoutProps) {
   const { state, toggleTheme, toggleDirection, logout } = useApp();
 
   return (
-    <div className="min-h-screen bg-secondary-50 dark:bg-secondary-950">
+    <div className="min-h-screen bg-secondary-300 dark:bg-secondary-950">
       <nav className="bg-white dark:bg-secondary-900 border-b border-secondary-200 dark:border-secondary-700 sticky top-0 z-40">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -25,7 +25,7 @@ export function TopNavLayout({ children }: TopNavLayoutProps) {
                 aria-label="Toggle theme"
               >
                 {state.theme === 'dark' ? (
-                  <Sun className="w-5 h-5" />
+                  <Sun className="w-5 h-5 text-white" />
                 ) : (
                   <Moon className="w-5 h-5" />
                 )}

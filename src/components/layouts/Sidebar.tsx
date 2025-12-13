@@ -51,12 +51,13 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
 
   return (
     <>
+    {/* menu button  */}
       <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white dark:bg-secondary-800 rounded-lg shadow-md"
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-secondary-400 dark:bg-secondary-800 rounded-lg shadow-md"
         aria-label="Toggle mobile menu"
       >
-        {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isMobileOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
       </button>
 
       {isMobileOpen && (
@@ -81,10 +82,10 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
             )}
             <button
               onClick={toggleSidebar}
-              className="p-2 hover:bg-secondary-100 dark:hover:bg-secondary-800 rounded-lg transition-colors"
+              className="mx-2 p-2 bg-secondary  dark:hover:bg-secondary-800 rounded-lg transition-colors"
               aria-label={state.layout.sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
             >
-              <Menu className="w-5 h-5" />
+              <Menu className="w-5 h-5 text-black  dark:text-white " />
             </button>
           </div>
 
@@ -121,7 +122,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
               title={state.layout.sidebarCollapsed ? 'Toggle theme' : undefined}
             >
               {state.theme === 'dark' ? (
-                <Sun className="w-5 h-5" />
+                <Sun className="w-5 h-5 text-white " />
               ) : (
                 <Moon className="w-5 h-5" />
               )}
@@ -137,7 +138,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
               className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-600 hover:bg-secondary-100 dark:text-secondary-400 dark:hover:bg-secondary-800 transition-colors"
               title={state.layout.sidebarCollapsed ? 'Toggle direction' : undefined}
             >
-              <ArrowLeftRight className="w-5 h-5" />
+              <ArrowLeftRight className="w-5 h-5 " />
               {!state.layout.sidebarCollapsed && (
                 <span className="font-medium">
                   {state.layout.direction === 'ltr' ? 'RTL' : 'LTR'}

@@ -55,7 +55,7 @@ export function Register({ onNavigate }: RegisterProps) {
         className="fixed top-4 right-4 p-3 bg-white dark:bg-secondary-800 rounded-full shadow-lg hover:shadow-xl transition-shadow"
         aria-label="Toggle theme"
       >
-        {state.theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+        {state.theme === 'dark' ? <Sun className="w-5 h-5 text-white" /> : <Moon className="w-5 h-5" />}
       </button>
 
       <div className="w-full max-w-md">
