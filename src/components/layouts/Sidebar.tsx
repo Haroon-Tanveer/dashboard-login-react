@@ -68,7 +68,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
       )}
 
       <aside
-        className={`fixed lg:sticky top-0 left-0 h-screen bg-white dark:bg-secondary-900 border-r border-secondary-200 dark:border-secondary-700 transition-all duration-300 z-40
+        className={`fixed lg:sticky top-0 left-0 h-screen bg-secondary-100 dark:bg-secondary-900 border-r border-secondary-200 dark:border-secondary-700 transition-all duration-300 z-40
           ${state.layout.sidebarCollapsed ? 'w-20' : 'w-64'}
           ${isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
@@ -95,7 +95,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
                 <li key={item.path}>
                   <button
                     onClick={() => handleNavClick(item.path)}
-                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-colors
+                    className={`w-full flex items-center gap-3 px-1 py-2 rounded-lg transition-colors
                       ${
                         currentPath === item.path
                           ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300'
@@ -138,7 +138,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
               className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-600 hover:bg-secondary-100 dark:text-secondary-400 dark:hover:bg-secondary-800 transition-colors"
               title={state.layout.sidebarCollapsed ? 'Toggle direction' : undefined}
             >
-              <ArrowLeftRight className="w-5 h-5 " />
+              <ArrowLeftRight className="w-5 h-5 "/>
               {!state.layout.sidebarCollapsed && (
                 <span className="font-medium">
                   {state.layout.direction === 'ltr' ? 'RTL' : 'LTR'}
