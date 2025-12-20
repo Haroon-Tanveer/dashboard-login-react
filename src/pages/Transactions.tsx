@@ -99,7 +99,7 @@ export function Transactions() {
             View and manage all your invoices and payments
           </p>
         </div>
-        <Button leftIcon={<Download className="w-5 h-5" />} variant="outline">
+        <Button className='mt-10 ml-4' leftIcon={<Download className="w-5 h-5" />} >
           Export
         </Button>
       </div>

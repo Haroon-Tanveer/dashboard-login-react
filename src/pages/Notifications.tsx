@@ -103,7 +103,7 @@ export function Notifications() {
             {unreadCount} unread notification{unreadCount !== 1 ? 's' : ''}
           </p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-3 mt-10 ml-4">
           <Button
             variant={filter === 'all' ? 'primary' : 'outline'}
             size="sm"
@@ -112,14 +112,14 @@ export function Notifications() {
             All
           </Button>
           <Button
-            variant={filter === 'unread' ? 'primary' : 'outline'}
+            variant={filter === 'all' ? 'primary' : 'outline'}
             size="sm"
             onClick={() => setFilter('unread')}
           >
             Unread
           </Button>
           {unreadCount > 0 && (
-            <Button variant="outline" size="sm" onClick={markAllAsRead}>
+            <Button  size="sm" onClick={markAllAsRead}>
               Mark all as read
             </Button>
           )}

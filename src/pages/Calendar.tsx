@@ -78,7 +78,9 @@ export function Calendar() {
             Manage your schedule and events
           </p>
         </div>
+        <div className="mt-10">
         <Button leftIcon={<Plus className="w-5 h-5" />}>Add Event</Button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">

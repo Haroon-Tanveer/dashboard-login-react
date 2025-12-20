@@ -54,7 +54,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
     {/* menu button  */}
       <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-secondary-400 dark:bg-secondary-800 rounded-lg shadow-md"
+        className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-secondary-600 dark:bg-secondary-800 rounded-lg shadow-md"
         aria-label="Toggle mobile menu"
       >
         {isMobileOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
@@ -62,7 +62,7 @@ export function Sidebar({ currentPath, onNavigate }: SidebarProps) {
 
       {isMobileOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-70 z-40"
           onClick={() => setIsMobileOpen(false)}
         />
       )}

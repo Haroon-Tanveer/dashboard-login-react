@@ -97,7 +97,7 @@ export function FileManager() {
             Manage and organize your files
           </p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-3 mt-10">
           <div className="flex bg-white dark:bg-secondary-800 rounded-lg border border-secondary-200 dark:border-secondary-700">
             <button
               onClick={() => setViewMode('grid')}

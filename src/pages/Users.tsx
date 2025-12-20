@@ -92,16 +92,18 @@ export function Users() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex  items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-secondary-900 dark:text-white mb-2">Users</h1>
           <p className="text-secondary-600 dark:text-secondary-400">
             Manage your user accounts and permissions
           </p>
         </div>
-        <Button leftIcon={<UserPlus className="w-5 h-5" />} onClick={() => setIsModalOpen(true)}>
+        <div className='flex justify-end'>
+          <Button className='mt-10 ml-5' leftIcon={<UserPlus className="top-3 w-4 h-4" />} onClick={() => setIsModalOpen(true)}>
           Add User
         </Button>
+        </div>
       </div>
 
       <Card>

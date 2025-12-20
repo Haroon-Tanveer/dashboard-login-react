@@ -69,7 +69,7 @@ export function Projects() {
             Track your team's progress with a Kanban board
           </p>
         </div>
-        <Button leftIcon={<Plus className="w-5 h-5" />}>Add Task</Button>
+        <div  ><Button className="mt-10 ml-4" leftIcon={<Plus className="w-5 h-5" />}>Add Task</Button></div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
