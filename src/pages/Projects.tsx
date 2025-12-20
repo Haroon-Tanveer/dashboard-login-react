@@ -57,8 +57,20 @@ const priorityColors = {
   high: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
 };
 
+const handleDeleteTask = (taskId: string) => {
+  setColumns(prev =>
+    prev.map(column => ({
+      ...column,
+      tasks: column.tasks.filter(task => task.id !== taskId),
+    }))
+  );
+};
+
+
 export function Projects() {
-  const [columns] = useState<Column[]>(initialColumns);
+ const [columns, setColumns] = useState<Column[]>(initialColumns);
+
+   const [openTaskId, setOpenTaskId] = useState<string | null>(null);
 
   return (
     <div className="space-y-6">
@@ -95,7 +107,36 @@ export function Projects() {
                       {task.title}
                     </h3>
                     <button className="text-secondary-400 hover:text-secondary-600 dark:hover:text-secondary-200">
-                      <MoreVertical className="w-4 h-4" />
+                      
+
+                      <div className="relative inline-block">
+     <button
+  onClick={() =>
+    setOpenTaskId(openTaskId === task.id ? null : task.id)
+  }
+  className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+>
+  <MoreVertical className="w-4 h-4" />
+</button>
+
+
+      {openTaskId === task.id && (
+  <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow z-10">
+    <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700">
+      Edit
+    </button>
+   <button
+  onClick={() => {
+    handleDeleteTask(task.id);
+    setOpenTaskId(null);
+  }}
+  className="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 text-red-600"
+>
+  Delete
+</button>
+  </div>
+)}
+    </div>
                     </button>
                   </div>
                   <p className="text-sm text-secondary-600 dark:text-secondary-400 mb-3">
